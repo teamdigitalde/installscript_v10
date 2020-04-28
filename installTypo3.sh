@@ -1,6 +1,6 @@
 #!/bin/bash
 
-url="http://get.typo3.org/9"
+url="http://get.typo3.org/10"
 target="t3latest.tar.gz"
 workingdirectory=${PWD}
 
