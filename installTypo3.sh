@@ -3,7 +3,6 @@
 url="http://get.typo3.org/10"
 target="t3latest.tar.gz"
 workingdirectory=${PWD}
-
 clear
 
 echo "Getting the TYPO3 Sources from ${url}, writing to ${target}"
