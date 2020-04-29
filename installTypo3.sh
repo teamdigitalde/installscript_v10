@@ -65,8 +65,8 @@ return [
     'BE' => [
         'debug' => true,
         'explicitADmode' => 'explicitAllow',
-        'installToolPassword' => '"$installPasswort"',
-        'loginSecurityLevel' => 'rsa',
+        'installToolPassword' => '$P$CAMstFeZNWquvENdiz4fxuKMY21hVL0',
+        'loginSecurityLevel' => 'normal',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\BcryptPasswordHash',
             'options' => [],
@@ -85,15 +85,7 @@ return [
             ],
         ],
     ],
-    'EXT' => [
-        'extConf' => [
-            'backend' => 'a:6:{s:9:"loginLogo";s:0:"";s:19:"loginHighlightColor";s:0:"";s:20:"loginBackgroundImage";s:0:"";s:13:"loginFootnote";s:0:"";s:11:"backendLogo";s:0:"";s:14:"backendFavicon";s:0:"";}',
-            'extensionmanager' => 'a:2:{s:21:"automaticInstallation";s:1:"1";s:11:"offlineMode";s:1:"0";}',
-            'flux' => 'a:3:{s:9:"debugMode";s:1:"0";s:7:"compact";s:1:"0";s:12:"handleErrors";s:1:"0";}',
-            'rsaauth' => 'a:1:{s:18:"temporaryDirectory";s:0:"";}',
-            'scheduler' => 'a:2:{s:11:"maxLifetime";s:4:"1440";s:15:"showSampleTasks";s:1:"1";}',
-        ],
-    ],
+    'EXT' => [],
     'EXTCONF' => [
         'lang' => [
             'availableLanguages' => [
@@ -114,17 +106,12 @@ return [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
-        'flux' => [
-            'autoload' => '0',
-            'debugMode' => '0',
-            'doktypes' => '0,1,4',
-            'handleErrors' => '0',
-            'pagesLanguageConfigurationOverlay' => '0',
-            'plugAndPlay' => '0',
-            'plugAndPlayDirectory' => 'design',
-        ],
-        'rsaauth' => [
-            'temporaryDirectory' => '',
+        'gridelements' => [
+            'additionalStylesheet' => '',
+            'disableCopyFromPageButton' => '0',
+            'disableDragInWizard' => '0',
+            'nestingInListModule' => '0',
+            'overlayShortcutTranslation' => '0',
         ],
         'scheduler' => [
             'maxLifetime' => '1440',
@@ -133,8 +120,7 @@ return [
     ],
     'FE' => [
         'debug' => true,
-        'loginSecurityLevel' => 'rsa',
-        'pageNotFound_handling' => 'USER_FUNCTION:typo3conf/ext/sitepackage/Resources/Private/Php/pageNotFound.php:user_pageNotFound->pageNotFound',
+        'loginSecurityLevel' => 'normal',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\BcryptPasswordHash',
             'options' => [],
@@ -171,6 +157,33 @@ return [
                         'defaultLifetime' => 0,
                     ],
                 ],
+                'hash' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\FileBackend',
+                ],
+                'imagesizes' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\SimpleFileBackend',
+                    'options' => [
+                        'compression' => '__UNSET',
+                    ],
+                ],
+                'pages' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\FileBackend',
+                    'options' => [
+                        'compression' => '__UNSET',
+                    ],
+                ],
+                'pagesection' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\FileBackend',
+                    'options' => [
+                        'compression' => '__UNSET',
+                    ],
+                ],
+                'rootline' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\FileBackend',
+                    'options' => [
+                        'compression' => '__UNSET',
+                    ],
+                ],
             ],
         ],
         'devIPmask' => '*',
@@ -178,7 +191,6 @@ return [
         'encryptionKey' => '5ad2b220f239fd6aeb5615444010fd3ce1d110f6de9c5df917cdbf1c8ca8349034fa2c06272ab77b755f006c88a23187',
         'exceptionalErrors' => 12290,
         'sitename' => 'New TYPO3 site',
-        'systemLogLevel' => 0,
     ],
 ];
 " >> LocalConfiguration.php
