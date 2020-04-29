@@ -294,20 +294,8 @@ return [
         'bootstrapslider' => [
             'packagePath' => 'typo3conf/ext/bootstrapslider/',
         ],
-        'dce' => [
-            'packagePath' => 'typo3conf/ext/dce/',
-        ],
-        'flux' => [
-            'packagePath' => 'typo3conf/ext/flux/',
-        ],
-        'sitepackage' => [
-            'packagePath' => 'typo3conf/ext/sitepackage/',
-        ],
         'tdtemplate' => [
             'packagePath' => 'typo3conf/ext/tdtemplate/',
-        ],
-        'vhs' => [
-            'packagePath' => 'typo3conf/ext/vhs/',
         ],
     ],
     'version' => 5,
@@ -353,19 +341,19 @@ cd tdtemplate
 git init > /dev/null
 git pull https://github.com/teamdigitalde/tdtemplate > /dev/null 2>&1
 
-cd ../
-git clone -b master https://github.com/FluidTYPO3/flux.git
-
-mkdir vhs
-cd vhs
-git init > /dev/null
-git pull https://github.com/FluidTYPO3/vhs > /dev/null 2>&1
-
-cd ../
-mkdir dce
-cd dce
-git init > /dev/null
-git pull https://bitbucket.org/ArminVieweg/dce/src > /dev/null 2>&1
+#cd ../
+#git clone -b master https://github.com/FluidTYPO3/flux.git
+#
+#mkdir vhs
+#cd vhs
+#git init > /dev/null
+#git pull https://github.com/FluidTYPO3/vhs > /dev/null 2>&1
+#
+#cd ../
+#mkdir dce
+#cd dce
+#git init > /dev/null
+#git pull https://bitbucket.org/ArminVieweg/dce/src > /dev/null 2>&1
 
 cd ../
 mkdir rte_ckeditor_image
