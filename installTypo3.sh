@@ -309,12 +309,6 @@ return [
         'tdtemplate' => [
             'packagePath' => 'typo3conf/ext/tdtemplate/',
         ],
-        'vhs' => [
-            'packagePath' => 'typo3conf/ext/vhs/',
-        ],
-        'dce' => [
-            'packagePath' => 'typo3conf/ext/dce/',
-        ]
     ],
     'version' => 5,
 ];
@@ -362,16 +356,16 @@ git pull https://github.com/teamdigitalde/tdtemplate > /dev/null 2>&1
 #cd ../
 #git clone -b master https://github.com/FluidTYPO3/flux.git
 #
-mkdir vhs
-cd vhs
-git init > /dev/null
-git pull https://github.com/FluidTYPO3/vhs > /dev/null 2>&1
+#mkdir vhs
+#cd vhs
+#git init > /dev/null
+#git pull https://github.com/FluidTYPO3/vhs > /dev/null 2>&1
 
-cd ../
-mkdir dce
-cd dce
-git init > /dev/null
-git pull https://bitbucket.org/ArminVieweg/dce/src > /dev/null 2>&1
+#cd ../
+#mkdir dce
+#cd dce
+#git init > /dev/null
+#git pull https://bitbucket.org/ArminVieweg/dce/src > /dev/null 2>&1
 
 cd ../
 mkdir rte_ckeditor_image
